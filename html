@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Resume Builder</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    input[type="text"], textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Resume Builder</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Your Name">
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" placeholder="Your Email">
+
+    <label for="phone">Phone:</label>
+    <input type="text" id="phone" placeholder="Your Phone">
+
+    <label for="experience">Experience:</label>
+    <textarea id="experience" placeholder="Your Experience"></textarea>
+
+    <label for="education">Education:</label>
+    <textarea id="education" placeholder="Your Education"></textarea>
+
+    <label for="skills">Skills:</label>
+    <textarea id="skills" placeholder="Your Skills"></textarea>
+
+    <button onclick="generateResume()">Generate Resume</button>
+</div>
+
+<script>
+    function generateResume() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var experience = document.getElementById("experience").value;
+        var education = document.getElementById("education").value;
+        var skills = document.getElementById("skills").value;
+
+        var resume = "Name: " + name + "\n" +
+                     "Email: " + email + "\n" +
+                     "Phone: " + phone + "\n" +
+                     "Experience: " + experience + "\n" +
+                     "Education: " + education + "\n" +
+                     "Skills: " + skills;
+
+        alert(resume); // You can customize this to display the resume in a different way
+    }
+</script>
+</body>
+</html>
