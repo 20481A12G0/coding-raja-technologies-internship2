@@ -1,28 +1,14 @@
-const resumeForm = document.getElementById('resumeForm');
-const resumeOutput = document.getElementById('resumeOutput');
-const outputName = document.getElementById('outputName');
-const outputEmail = document.getElementById('outputEmail');
-const outputPhone = document.getElementById('outputPhone');
-const outputAddress = document.getElementById('outputAddress');
-const outputEducation = document.getElementById('outputEducation');
-const outputExperience = document.getElementById('outputExperience');
+const audioPlayer = document.getElementById('audioPlayer');
 
-resumeForm.addEventListener('submit', function(event) {
-    event.preventDefault();
+function playAudio() {
+    audioPlayer.play();
+}
 
-    const fullName = document.getElementById('fullName').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const address = document.getElementById('address').value;
-    const education = document.getElementById('education').value;
-    const experience = document.getElementById('experience').value;
+function pauseAudio() {
+    audioPlayer.pause();
+}
 
-    outputName.textContent = fullName;
-    outputEmail.textContent = email;
-    outputPhone.textContent = phone;
-    outputAddress.textContent = address;
-    outputEducation.textContent = education;
-    outputExperience.textContent = experience;
-
-    resumeOutput.classList.remove('hidden');
-});
+function stopAudio() {
+    audioPlayer.pause();
+    audioPlayer.currentTime = 0;
+}
